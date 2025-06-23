@@ -1,0 +1,13 @@
+// main.scss
+@use 'config/var' as *;
+@use 'config/reset';
+@use 'hero';
+@use 'header';
+@use 'about';
+@use 'elenco';
+@use 'footer';
+
+body {
+    width: 100%;
+    background-color: $bgColor;
+}
