@@ -1,0 +1,72 @@
+@use 'config/var' as *;
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0 40px;
+    background-color: #1d1c1c;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #ffffff;
+
+        @media (max-width: 768px) {
+            font-size: 1.3rem;
+        }
+    }
+
+    .btns {
+        margin-top: 20px;
+        @media (max-width: 768px) {
+                width: 100%;
+            }
+
+        button {
+            padding: 12px 7px;
+            font-size: x-large;
+            font-weight: 500;
+            color: $colorTitle;
+            background-color: $bgColorBtn;
+            border: 3px solid $bgColorBtn;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: backgorund-color .5s ease-in;
+
+            @media (max-width: 768px) {
+                display: block;
+                margin: 10px auto;
+            }
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+
+    }
+
+    .social__links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+
+        
+        img {
+            width: 50px;
+            transition: all .2s ease-in;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
