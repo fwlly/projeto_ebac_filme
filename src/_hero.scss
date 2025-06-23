@@ -1,0 +1,59 @@
+// _hero.scss
+@use 'config/var' as *;
+
+.hero {
+    min-height: 90vh;
+    padding: 5vw;
+    background-image: url("../../dist/img/hero/fundo_starwars.jpg"); // 🔄 imagem nova
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        background-position: center;
+    }
+
+    &__branding {
+        max-width: 750px;
+        width: 100%;
+        padding: 40px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding: 0;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        &__title {
+            @include title();
+            margin-bottom: 30px;
+
+            @media (max-width: 768px) {
+                font-size: 3rem;
+            }
+        }
+
+        &__description {
+            @include text();
+            margin-bottom: 80px;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__cta {
+            @include btnCTA();
+
+            i {
+                margin-right: 7px;
+            }
+
+            &:hover {
+                background-color: #ffd700; // dourado Jedi 😄
+            }
+        }
+    }
+}
