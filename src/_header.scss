@@ -1,0 +1,64 @@
+@use 'config/var' as *;
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.6);
+    padding: 10px 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+        background-color: rgba(0,0,0,.3);
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        &__img {
+            width: 90px;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-family: "Rajdhani", sans-serif;
+            color: $colorTitle;
+        }
+    }
+
+    &__cta {
+        a {
+            @include btnCTA();
+            border: 2px solid $bgColorbtnCTA;
+
+            &:hover {
+                background-color: transparent;
+                color: $bgColorbtnCTA;
+            }
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+.is--active {
+    border-bottom: 3px solid #ffff;
+}
+
+.scroll--back {
+    .header {
+        background-color: $bgColor;
+        box-shadow: 0 2px 5px 12px rgba(0,0,0,.3);
+    }
+    .header__logo {
+        text-align: center;
+    }
+}
