@@ -1,0 +1,61 @@
+@use 'config/var' as *;
+
+.elenco {
+    padding: 100px 5vw;
+    width: 100%;
+    text-align: center;
+
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: "Rajdhani", sans-serif;
+        color: $colorTitle;
+        margin-bottom: 30px;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: center;
+        gap: 2%;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: 45% 45%;
+            gap: 3%;
+        }
+
+        &__card {
+            background-color: #141212;
+            padding: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all .3s ease;
+            margin-bottom: 20px;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+            img {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                margin-bottom: 20px;
+            }
+            .description__actor {
+                h2 {
+                    color: $colorTitle;
+                    font-size: 2rem;
+                    margin-bottom: 15px;
+                }
+                p {
+                    color: $colorText;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
