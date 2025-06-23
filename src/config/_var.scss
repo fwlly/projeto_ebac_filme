@@ -1,0 +1,43 @@
+// _var.scss
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+$bgColor: #000000; // fundo espacial
+$bgColorBtn: #111111; // botões discretos
+$bgColorBtnHover: #292929; // hover mais claro
+$bgColorbtnCTA: #ffe81f; // amarelo Star Wars
+$colorTitle: #ffe81f; // título também amarelo
+$colorText: #ffffff; // texto branco clássico
+
+@mixin title() {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: $colorTitle;
+    font-family: "Rajdhani", sans-serif;
+    text-transform: uppercase;
+}
+
+@mixin text() {
+    font-size: 2rem;
+    font-weight: 400;
+    color: $colorText;
+}
+
+@mixin btnCTA() {
+    padding: 15px 18px;
+    background-color: $bgColorbtnCTA;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: transparent;
+        color: $bgColorbtnCTA;
+        border: 2px solid $bgColorbtnCTA;
+    }
+}
