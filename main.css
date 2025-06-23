@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap");
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:"Lato",sans-serif}
+
+body{width:100%;background-color:#000}
+
+.header{position:fixed;top:0;width:100%;background-color:rgba(0,0,0,0.6);padding:10px 5vw;display:flex;align-items:center;justify-content:space-between;z-index:2}
+@media(max-width:768px){.header{justify-content:center;background-color:rgba(0,0,0,0.3)}}
+.header__logo{display:flex;align-items:center}
+.header__logo__img{width:90px}
+.header__logo__title{font-size:2.5rem;text-transform:uppercase;font-family:"Rajdhani",sans-serif;color:#ffe81f}
+.header__cta a{padding:15px 18px;background-color:#ffe81f;color:#000;font-weight:bold;text-decoration:none;font-size:30px;border-radius:8px;text-transform:uppercase;border:2px solid #ffe81f}
+.header__cta a:hover{background-color:transparent;color:#ffe81f}
+@media(max-width:768px){.header__cta{display:none}}
+
+.hero{min-height:90vh;padding:5vw;background-image:url("../../dist/img/hero/fundo_starwars.jpg");background-repeat:no-repeat;background-size:cover;display:flex;align-items:center}
+@media(max-width:768px){.hero{background-position:center}}
+.hero__branding{max-width:750px;width:100%;padding:40px}
+@media(max-width:768px){.hero__branding{width:100%;padding:0;text-align:center;padding-top:50px}}
+.hero__branding__title{font-size:4rem;font-weight:600;letter-spacing:2px;color:#ffe81f;font-family:"Rajdhani",sans-serif;margin-bottom:30px;text-transform:uppercase}
+@media(max-width:768px){.hero__branding__title{font-size:3rem}}
+.hero__branding__description{font-size:2rem;font-weight:400;color:#ffffff;margin-bottom:80px}
+@media(max-width:768px){.hero__branding__description{font-size:1.5rem}}
+.hero__branding__cta{padding:15px 18px;background-color:#ffe81f;color:#000;font-weight:bold;text-decoration:none;font-size:30px;border-radius:8px;text-transform:uppercase;transition:.3s}
+.hero__branding__cta i{margin-right:7px}
+.hero__branding__cta:hover{background-color:transparent;color:#ffe81f;border:2px solid #ffe81f}
+
+.about{padding:50px 5vw;width:100%;display:flex;align-items:center;justify-content:center;gap:50px}
+@media(max-width:768px){.about{display:block;text-align:center}}
+.about__img{border-radius:6px;width:50vw}
+@media(max-width:768px){.about__img{width:100%}}
+.about__description{max-width:600px;width:100%}
+.about__description h3{color:#ffe81f;font-family:"Rajdhani",sans-serif;font-size:3rem;margin-bottom:20px}
+.about__description p{color:#ffffff;font-size:1.5rem}
+
+.elenco{padding:100px 5vw;width:100%;text-align:center}
+.elenco__title{font-size:3rem;font-weight:bold;font-family:"Rajdhani",sans-serif;color:#ffe81f;margin-bottom:30px}
+.elenco__cards{display:grid;grid-template-columns:30% 30% 30%;justify-content:center;gap:2%}
+@media(max-width:768px){.elenco__cards{display:block}}
+@media(max-width:1024px){.elenco__cards{grid-template-columns:45% 45%;gap:3%}}
+.elenco__cards__card{background-color:#141212;padding:30px;border-radius:4px;cursor:pointer;transition:.3s;margin-bottom:20px}
+.elenco__cards__card:hover{transform:scale(1.05)}
+.elenco__cards__card img{width:100%;height:250px;object-fit:cover;margin-bottom:20px}
+.elenco__cards__card .description__actor h2{color:#ffe81f;font-size:2rem;margin-bottom:15px}
+.elenco__cards__card .description__actor p{color:#ffffff;font-size:1.5rem}
+
+footer{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 0 40px;background-color:#111}
+@media(max-width:768px){footer{text-align:center}}
+footer h3{font-size:1.5rem;font-weight:500;color:#fff}
+@media(max-width:768px){footer h3{font-size:1.3rem}}
+footer .btns{margin-top:20px}
+@media(max-width:768px){footer .btns{width:100%}}
+footer .btns button{padding:12px 7px;font-size:x-large;font-weight:500;color:#ffe81f;background-color:#111;border:3px solid #ffe81f;margin-right:10px;cursor:pointer;transition:background-color .5s ease-in}
+@media(max-width:768px){footer .btns button{display:block;margin:10px auto}}
+footer .btns button:hover{background-color:transparent}
+footer .social__links{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:20px;cursor:pointer}
+footer .social__links img{width:50px;transition:.2s ease-in}
+footer .social__links img:hover{transform:scale(1.2)}
