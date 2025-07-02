@@ -1,7 +1,7 @@
 {
   "name": "modulo21-projeto4",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp",
