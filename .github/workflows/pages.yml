@@ -1,35 +1,25 @@
-name: Deploy Jekyll with SCSS to GitHub Pages
+name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: [ main ]  # ou 'master', dependendo da sua branch padrão
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Instalar Ruby e Jekyll
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # pode ajustar conforme necessário
+          ruby-version: '3.1'
 
-      - name: Instalar dependências
-        run: |
-          gem install bundler
-          bundle init
-          echo "gem 'jekyll'" >> Gemfile
-          echo "gem 'jekyll-sass-converter'" >> Gemfile
-          bundle install
-
-      - name: Build do site com Jekyll
-        run: bundle exec jekyll build
-
-      - name: Deploy para GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
+      - name: In
