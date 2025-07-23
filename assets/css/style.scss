@@ -1,1 +1,8 @@
-@import "variaveis"
+
+$bg: #000;
+$text: #fff;
+
+body {
+  background: $bg;
+  color: $text;
+}
