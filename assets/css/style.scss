@@ -1,8 +1,225 @@
+// Paleta de cores
+$primary: #ffe81f; // Amarelo Star Wars
+$dark: #000;
+$light: #fff;
+$gray: #ccc;
 
-$bg: #000;
-$text: #fff;
+// Fonte
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 
 body {
-  background: $bg;
-  color: $text;
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: $dark;
+  color: $light;
+  line-height: 1.6;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: $dark;
+  border-bottom: 2px solid $primary;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &__title {
+      font-size: 2rem;
+      color: $primary;
+    }
+
+    &__img {
+      width: 60px;
+    }
+  }
+
+  &__cta a {
+    background-color: $primary;
+    color: $dark;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+
+    &:hover {
+      background-color: darken($primary, 10%);
+    }
+  }
+}
+
+/* Hero */
+.hero {
+  background: url('/dist/oila.jpg') center/cover no-repeat;
+  padding: 80px 20px;
+  text-align: center;
+
+  &__branding {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+
+    &__title {
+      font-size: 2.5rem;
+      color: $primary;
+    }
+
+    &__description {
+      margin: 20px 0;
+    }
+
+    &__cta {
+      background-color: $primary;
+      color: $dark;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 10px;
+
+      i {
+        margin-right: 8px;
+      }
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  align-items: center;
+  justify-content: center;
+
+  &__img {
+    max-width: 400px;
+  }
+
+  &__description {
+    max-width: 600px;
+
+    h3 {
+      color: $primary;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+/* Elenco */
+.elenco {
+  padding: 60px 20px;
+
+  &__title {
+    text-align: center;
+    color: $primary;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+    &__card {
+      background-color: #111;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 232, 31, 0.2);
+      text-align: center;
+
+      h2 {
+        margin-top: 10px;
+        color: $primary;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid $primary;
+
+  h3 {
+    margin: 10px 0;
+    color: $primary;
+  }
+
+  .btns {
+    margin-top: 20px;
+
+    button {
+      margin: 10px;
+      background-color: $primary;
+      color: $dark;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken($primary, 10%);
+      }
+    }
+  }
+
+  .social__links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
 }
