@@ -1,5 +1,5 @@
 // Paleta de cores
-$primary: #ffe81f; // Amarelo Star Wars
+$primary: #ffe81f;
 $dark: #000;
 $light: #fff;
 $gray: #ccc;
@@ -51,6 +51,7 @@ img {
 
     &__img {
       width: 60px;
+      border-radius: 10px;
     }
   }
 
@@ -119,6 +120,7 @@ img {
 
   &__img {
     max-width: 400px;
+    border-radius: 10px;
   }
 
   &__description {
@@ -127,6 +129,7 @@ img {
     h3 {
       color: $primary;
       font-size: 1.8rem;
+      margin-bottom: 10px;
     }
   }
 }
@@ -153,6 +156,10 @@ img {
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(255, 232, 31, 0.2);
       text-align: center;
+
+      img {
+        border-radius: 10px;
+      }
 
       h2 {
         margin-top: 10px;
@@ -206,6 +213,7 @@ footer {
     img {
       width: 40px;
       height: 40px;
+      border-radius: 10px;
     }
   }
 }
